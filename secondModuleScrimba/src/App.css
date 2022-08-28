@@ -1,0 +1,86 @@
+
+nav {
+  background-color: #F55A5A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 55px;
+}
+
+nav .globe {
+  color: white;
+}
+
+nav p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.075em;
+}
+
+.card-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card{
+  display: flex;
+  margin: 40px;
+  align-items: center;
+}
+
+.card-image {
+  margin-right: 20px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.location-icon {
+  width: 8px;
+}
+
+.location-name{
+  font-size: 10.24px;
+  line-height: 12px;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: #2B283A;
+}
+
+.location-link{
+  font-size: 10.24px;
+  line-height: 12px;
+  color: #918E9B;
+  margin-left: 10px;
+}
+
+.card-title {
+  font-size: 25px;
+  line-height: 30px;
+  color: #2B283A;
+}
+
+.dates {
+  font-weight: 700;
+  font-size: 10.24px;
+  line-height: 12px;
+  color: #2B283A;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  color: #2B283A;
+}
+
+
+

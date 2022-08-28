@@ -1,0 +1,118 @@
+.App {
+  max-width: 317px;
+  width: 100%;
+  background-color: #1A1B21;
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.intro-section {
+  text-align: center;
+}
+
+.intro-section > img {
+  width: 100%;
+}
+
+.intro--name {
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 21px;
+}
+
+.intro--position {
+  font-size: 13px;
+  line-height: 15px;
+  color: #F3BF99;
+  margin-block: 2px 5px;
+}
+
+.intro-site {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  color: #F5F5F5;
+}
+
+.intro-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin-block: 15px;
+}
+
+.email, .linkedIn {
+  width: 115px;
+  height: 34px;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email {
+  background-color: white;
+  border: 1px solid #D1D5DB;
+  color: #374151;
+}
+
+.email:hover, .linkedIn:hover {
+  opacity: 0.7;
+}
+
+.intro-links span {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.linkedIn {
+  background-color: #5093E2;
+  border: none;
+  color: white;
+}
+
+
+.main-section {
+  margin-block: 30px;
+}
+
+.main--title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #F5F5F5;
+}
+
+.main--text {
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  color: #DCDCDC;
+  margin-bottom: 15px;
+}
+
+
+.footer {
+  background-color: #161619;
+  padding: 20px 0;
+}
+
+.footer--links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
