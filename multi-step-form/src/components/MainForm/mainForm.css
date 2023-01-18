@@ -1,0 +1,59 @@
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  padding: 2rem 1.5rem;
+  max-width: 550px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.step {
+  background-color: var(--white);
+  border-radius: 10px;
+  margin-bottom: calc(-12.5vh + 25px);
+}
+
+.step--info {
+  margin-bottom: 1.5rem;
+}
+
+.step--title {
+  font-family: Ubuntu-Bold, sans-serif;
+  font-size: 1.35rem;
+  color: var(--marine-blue);
+  margin-bottom: 0.8rem;
+}
+
+.step--description {
+  color: var(--cool-gray);
+}
+
+@media screen and (max-width: 767.5px) {
+  .mainForm {
+    min-height: 75vh;
+  }
+  
+  .step {
+    position: relative;
+    top: -12.5vh;
+    box-shadow: 0 1rem 20px var(--light-gray);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainForm {
+    width: 100%;
+  }
+
+  .step--title {
+    font-size: 2rem;
+  }
+
+  .step--info {
+    margin-bottom: 2rem;
+  }
+}

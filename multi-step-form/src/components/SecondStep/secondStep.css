@@ -1,0 +1,180 @@
+
+.second--form {
+  display: flex;
+  flex-direction: column;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--cool-gray);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 350ms ease-in-out;
+}
+
+.plan:hover,
+.plan:focus {
+  border-color: var(--marine-blue);
+}
+
+/* not supported in firefox */
+
+/* .plan:has(input:checked) {
+  background-color: var(--magnolia);
+  border-color: var(--marine-blue);
+} */
+
+.active-plan {
+  background-color: var(--magnolia);
+  border-color: var(--marine-blue);
+}
+
+.plan--checkbox {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.plan--info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.plan--description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.plan--name {
+  font-size: 1rem;
+  color: var(--marine-blue);
+  letter-spacing: 0.05em;
+}
+
+.plan--price {
+  font-size: 0.9rem;
+  color: var(--cool-gray);
+}
+
+.plan--sale {
+  font-size: 0.95rem;
+  color: var(--marine-blue);
+}
+
+.second--billing {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: var(--magnolia);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+.billing-option {
+  color: var(--cool-gray);
+  font-family: Ubuntu-Medium, sans-serif;
+}
+
+.active-billing {
+  color: var(--marine-blue);
+}
+
+.billing-btn {
+  width: 45px;
+  height: 22.5px;
+  border-radius: 200px;
+  border: none;
+  background-color: var(--marine-blue);
+  cursor: pointer;
+}
+
+.switch {
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  border-radius: 50%;
+  margin: 0 3.25px;
+  transition: transform 400ms ease-in-out;
+}
+
+.switch--right {
+  transform: translateX(calc(45px - 16px - 6.5px));
+}
+
+@media screen and (min-width: 768px) {
+
+  .second.container {
+    padding-bottom: 0;
+  }
+  
+  .plans {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .plan {
+    padding: 1rem;
+  }
+
+  .plan--info {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 125px;
+    gap: 2.5rem;
+  }
+
+  .plan--description {
+    gap: 0.5rem;
+  }
+
+
+  .plan--sale {
+    letter-spacing: -0.05em;
+    font-size: 0.75rem;
+  }
+
+  .billing-option {
+    font-size: 0.95rem;
+  }
+  
+}
+
+@media screen and (min-width: 875px) {
+
+  .plans {
+    gap: 1rem;
+  }
+
+  .plan {
+    padding: 1.5rem;
+  }
+
+  .plan--name {
+    font-size: 1.15rem;
+  }
+
+  .plan--price {
+    font-size: 1rem;
+  }
+
+  .plan--sale {
+    letter-spacing: -0.05em;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,75 @@
+.buttons {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons button {
+  font-family: Ubuntu-Medium, sans-serif;
+  letter-spacing: 0.05em;
+  transition: all 300ms ease-in-out;
+}
+
+.right {
+  margin-left: auto;
+  border: none;
+  border-radius: 5px;
+  padding: 0.85em 1em;
+  color: var(--white);
+}
+
+.next-step {
+  background-color: var(--marine-blue);
+}
+
+.confirm {
+  background-color: var(--purplish-blue);
+}
+
+.next-step:hover,
+.next-step:focus {
+  background-color: hsl(213, 95%, 29%);
+}
+
+.next-step:disabled {
+  background-color: var(--cool-gray);
+  cursor: not-allowed;
+} 
+
+.confirm:hover,
+.confirm:focus {
+  opacity: 0.8;
+}
+
+
+.go-back {
+  border: none;
+  background-color: transparent;
+  color: var(--cool-gray);
+}
+
+.go-back:hover,
+.go-back:focus {
+  color: var(--marine-blue);
+}
+
+@media screen and (max-width: 767.5px) {
+  .buttons {
+    background-color: var(--white);
+    /* max-height: 10vh; */
+    padding: 1rem 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    width: 90%;
+    max-width: 550px;
+    padding: 0 1.5rem;
+    height: 100%;
+    max-height: 60px;
+  }
+}
+

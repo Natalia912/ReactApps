@@ -1,0 +1,20 @@
+.wrapper {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--magnolia);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    min-height: unset;
+    height: 100%;
+    width: 95%;
+    max-height: 800px;
+    background-color: var(--white);
+    display: flex;
+    border-radius: 15px;
+    padding: 1rem;
+  }
+}

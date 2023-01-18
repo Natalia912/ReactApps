@@ -1,0 +1,44 @@
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  gap: 1rem;
+  min-height: 380px;
+}
+
+.success--img {
+  width: 3.5rem;
+}
+
+.success--header {
+  font-size: 1.4rem;
+  font-family: Ubuntu-Bold, sans-serif;
+  color: var(--marine-blue);
+}
+
+.success--description {
+  color: var(--cool-gray);
+  line-height: 1.4em;
+}
+
+@media screen and (min-width: 768px) {
+  .success {
+    gap: 1.5rem;
+    min-height: unset;
+    max-width: 500px;
+  }
+
+  .success--img {
+    width: 4rem;
+  }
+
+  .success--header {
+    font-size: 1.65rem;
+  }
+  .success--description {
+    line-height: 1.5em;
+  }
+}

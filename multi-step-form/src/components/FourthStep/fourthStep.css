@@ -1,0 +1,102 @@
+.finishing--services {
+  background-color: var(--magnolia);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.finishing--plan,
+.finishing--addOn,
+.finishing--total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finishing--total {
+  padding: 1rem;
+}
+
+.finishing--plan-name,
+.finishing--plan-price {
+  font-size: 0.95rem;
+  font-family: Ubuntu-Bold, sans-serif;
+  color: var(--marine-blue);
+}
+
+.change-plan {
+  border: none;
+  background-color: transparent;
+  color: var(--cool-gray);
+  text-decoration: underline;
+  font-family: Ubuntu-Regular, sans-serif;
+  text-decoration-thickness: 1.5px;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  letter-spacing: -0.05em;
+  cursor: pointer;
+  transition: color 350ms ease-in-out;
+}
+
+.change-plan:hover,
+.change-plan:focus {
+  color: var(--marine-blue);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--light-gray);
+  border: none;
+}
+
+.finishing--addOns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+}
+
+.finishing--addOnName {
+  color: var(--cool-gray);
+  font-size: 0.9rem;
+  letter-spacing: -0.025em;
+}
+
+.finishing--addOnPrice {
+  color: var(--marine-blue);
+  font-size: 0.95rem;
+}
+
+.total {
+  color: var(--cool-gray);
+  font-size: 0.95rem;
+}
+
+.total--price {
+  color: var(--purplish-blue);
+  font-family: Ubuntu-Bold, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .finishing--plan-name {
+    font-family: Ubuntu-Medium, sans-serif;
+  }
+
+  .finishing--plan-name,
+  .finishing--plan-price {
+    font-size: 1rem;
+  }
+
+  .change-plan,
+  .finishing--addOnName  {
+    font-size: 0.95rem;
+  }
+
+  .finishing--services,
+  .finishing--total {
+    padding: 1.5rem;
+  }
+}

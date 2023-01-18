@@ -1,0 +1,14 @@
+.step-btn {
+  font-size: 0.8rem;
+  font-family: Ubuntu-Bold, sans-serif;
+  background-color: transparent;
+  color: var(--white);
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  padding: 0.55em 0.9em;
+}
+
+.active-step-btn {
+  background-color: var(--light-blue);
+  color: var(--marine-blue);
+}

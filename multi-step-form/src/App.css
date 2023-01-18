@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url("./assets/fonts/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url("./assets/fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url("./assets/fonts/Ubuntu-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+
+  --ex-sm: 320px;
+  --sm: 480px;
+  --md: 768px;
+  --bg: 1024px;
+  --ex-bg: 1200px;
+}
+
+body {
+  font-size: 16px;
+  font-family: Ubuntu-Regular, sans-serif;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--magnolia);
+}
