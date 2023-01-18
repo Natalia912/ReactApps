@@ -7,13 +7,9 @@ import "./thirdStep.css"
 
 function ThirdStep() {
 
-  const {customerInfo, setCustomerInfo, setCurrentStep} = useContext(Context)
+  const {customerInfo, setCustomerInfo} = useContext(Context)
   const {isMonthly} = customerInfo
   const {addOns} = data
-
-  const onSubmit = () => {
-    setCurrentStep(4)
-  }
 
   const handleChange = (e) => {
 
@@ -72,7 +68,7 @@ function ThirdStep() {
           <h1 className="step--title">Pick add-ons</h1>
           <p className="step--description">Add-ons help enhance your gaming experience.</p>
         </div>
-        <form onSubmit={onSubmit} className="third--form" id="third--form">
+        <form className="third--form">
           {addOnsEl}
         </form>
       </section>

@@ -6,13 +6,9 @@ import "./secondStep.css"
 
 function SecondStep() {
   
-  const {customerInfo, setCustomerInfo, setCurrentStep} = useContext(Context)
+  const {customerInfo, setCustomerInfo} = useContext(Context)
   const {isMonthly} = customerInfo
   const {plans, addOns} = data
-
-  const onSubmit = () => {
-    setCurrentStep(3)
-  } 
 
   const changePlan = (event) => {
 
@@ -91,7 +87,7 @@ function SecondStep() {
         <h1 className="step--title">Select your plan</h1>
         <p className="step--description">You have the option of monthly or yearly billing.</p>
       </div>
-      <form onSubmit={onSubmit} className="second--form" id="second--form">
+      <form className="second--form">
         <div className="plans">
           {plansEl} 
         </div>
