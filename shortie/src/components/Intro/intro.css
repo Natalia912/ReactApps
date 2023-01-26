@@ -1,0 +1,89 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.intro--content {
+  max-width: 500px;
+  width: 50%;
+}
+
+.intro--header {
+  font-size: 3.8rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--very-dark-blue);
+}
+
+.intro--description {
+  color: var(--grayish-violet);
+  margin-bottom: 1.5rem;
+}
+
+.intro--hero {
+  max-width: 600px;
+  width: 50%;
+  object-fit: cover;
+}
+
+.intro--heroPic {
+  width: 100%;
+  min-width: 600px;
+}
+
+@media screen and (max-width: 1100px) {
+  .intro--heroPic {
+    position: relative;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .intro--header {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro--content {
+    width: 65%;
+  }
+
+  .intro--hero {
+    width: 35%;
+  }
+  .intro--heroPic {
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .intro--content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro--header {
+    font-size: 2.5rem;
+  }
+
+  .intro--description {
+    margin-top: 0.5rem;
+  }
+
+  .intro--hero {
+    width: 100%;
+  }
+
+  .intro--heroPic {
+    position: static;
+    min-width: unset;
+  }
+}
