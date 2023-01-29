@@ -1,0 +1,43 @@
+.boost {
+  width: 100%;
+  background-image: url('/src/assets/bg-boost-desktop.svg');
+  background-color: var(--dark-violet);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boost-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.boost--header {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .boost {
+    width: 100%;
+    background-image: url('/src/assets/bg-boost-mobile.svg');
+    min-height: 160px;
+  }
+
+  .boost-container {
+    gap: 0.6rem;
+  }
+
+  .boost--header {
+    font-size: 1.25rem;
+  }
+}

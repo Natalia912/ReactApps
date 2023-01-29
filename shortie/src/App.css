@@ -34,3 +34,7 @@ body {
   margin: 0 auto;
   width: 90%;
 }
+
+ul {
+  list-style: none;
+}
