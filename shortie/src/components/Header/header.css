@@ -1,0 +1,151 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.navbar-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 20%;
+}
+
+.navbar-nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-divider {
+  display: none;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: var(--grayish-violet);
+  font-size: 0.85rem;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-item > a:hover,
+.nav-item > a:focus {
+  color: var(--very-dark-violet);
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 2px;
+  background-color: var(--grayish-violet);
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-header {
+    font-size: 2rem;
+  }
+
+  .navbar-nav {
+    width: 75%;
+  }
+
+  .nav-items {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    position: relative;
+  }
+
+  .navbar-header {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .navbar-nav {
+    position: fixed;
+    visibility: hidden;
+    transform: scale(0);
+    transform-origin: top center;
+    width: 90%;
+    z-index: 999;
+    background-color: var(--dark-violet);
+    border-radius: 10px;
+    top: 80px;
+    flex-direction: column;
+    padding: 2rem;
+    transition: all 300ms ease-in-out;
+  }
+
+  .nav-divider {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 2px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--grayish-violet);
+    opacity: 50%;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .nav-item {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item > a {
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .nav-item > a:hover,
+  .nav-item > a:focus {
+    opacity: 0.6;
+    color: white;
+  }
+
+  .nav-item > button {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .isActive {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-divider {
+    margin: 1rem 0;
+  }
+}
