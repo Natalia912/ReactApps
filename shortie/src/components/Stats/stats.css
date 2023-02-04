@@ -1,0 +1,31 @@
+.stats {
+  background-color: #f4f7fc;
+  padding: 12rem 0;
+  z-index: -2;
+}
+
+.cards-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+  justify-content: center;
+}
+
+.cards-wrapper > .card:nth-of-type(3) {
+  position: relative;
+  top: 40px;
+}
+
+.cards-wrapper > .card:nth-of-type(4) {
+  position: relative;
+  top: 80px;
+}
+
+.line {
+  position: absolute;
+  height: 10px;
+  width: 70%;
+  top: calc(50% + 40px);
+  left: 15%;
+  background-color: var(--cyan);
+}

@@ -1,0 +1,25 @@
+.card {
+  max-width: 300px;
+  padding: 1.5em;
+  border-radius: 5px;
+  background-color: white;
+  z-index: 2;
+}
+
+.card-icon {
+  background-color: var(--dark-violet);
+  padding: 1em;
+  border-radius: 50%;
+  position: relative;
+  transform: translateY(-85%);
+}
+
+.card-title {
+  margin-bottom: 0.8rem;
+  margin-top: -2.5rem;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: var(--grayish-violet);
+}
