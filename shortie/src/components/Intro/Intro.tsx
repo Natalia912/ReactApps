@@ -15,7 +15,7 @@ function Intro() {
       <div className="intro--hero">
         <img
           className="intro--heroPic"
-          src="/src/assets/illustration-working.svg"
+          src="/assets/illustration-working.svg"
           alt="person working in an office"
         />
       </div>

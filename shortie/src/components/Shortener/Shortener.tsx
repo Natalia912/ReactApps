@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import isValidUrl from '../../helpers/isValidUrl';
 import useAPI from '../../hooks/useAPI';
 
-import Button from '../../ui/Button/Button';
 import Link from '../Link/Link';
 import './shortener.css';
 

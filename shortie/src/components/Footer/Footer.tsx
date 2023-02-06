@@ -1,7 +1,7 @@
-import { ReactComponent as Twitter } from '../../assets/icon-twitter.svg';
-import { ReactComponent as Facebook } from '../../assets/icon-facebook.svg';
-import { ReactComponent as Pinterest } from '../../assets/icon-pinterest.svg';
-import { ReactComponent as Instagram } from '../../assets/icon-instagram.svg';
+import { ReactComponent as Twitter } from '/src/assets/icon-twitter.svg';
+import { ReactComponent as Facebook } from '/src/assets/icon-facebook.svg';
+import { ReactComponent as Pinterest } from '/src/assets/icon-pinterest.svg';
+import { ReactComponent as Instagram } from '/src/assets/icon-instagram.svg';
 
 import './footer.css';
 

@@ -7,7 +7,7 @@
   width: 100%;
   border-radius: 10px;
   padding: 2rem 1rem;
-  background: url('/src/assets/bg-shorten-desktop.svg');
+  background: url('/assets/bg-shorten-desktop.svg');
   background-color: var(--dark-violet);
 }
 

@@ -1,6 +1,6 @@
 .boost {
   width: 100%;
-  background-image: url('/src/assets/bg-boost-desktop.svg');
+  background-image: url('/assets/bg-boost-desktop.svg');
   background-color: var(--dark-violet);
   background-position: center center;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 @media screen and (max-width: 480px) {
   .boost {
     width: 100%;
-    background-image: url('/src/assets/bg-boost-mobile.svg');
+    background-image: url('/assets/bg-boost-mobile.svg');
     min-height: 160px;
   }
 
