@@ -34,7 +34,9 @@ const Card: FC<CardI> = ({ id }) => {
 
   return (
     <div className="card">
-      <img src={element?.icon} alt="icon" className="card-icon" />
+      <div className="icon-wrapper">
+        <img src={element?.icon} alt="icon" className="card-icon" />
+      </div>
       <h4 className="card-title">{element?.title}</h4>
       <p className="card-description">{element?.description}</p>
     </div>
