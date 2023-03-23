@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 import { staggerContainer } from '../motion'
 
-const SectionWrapper = (Component, idName) =>
+const SectionWrapper = (Component) =>
   function HOC() {
     return (
       <motion.section
@@ -12,7 +12,6 @@ const SectionWrapper = (Component, idName) =>
         viewport={{ once: true, amount: 0.25 }}
         className='w-screen'
       >
-        <span className='hidden' id={idName} />
         <Component />
       </motion.section>
     )

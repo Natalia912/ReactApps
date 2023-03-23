@@ -2,12 +2,12 @@ import { motion } from 'framer-motion'
 
 import Container from './Container'
 import { HeroImage } from '../assets'
-import { fadeIn, textVariant } from '../motion'
+import { fadeIn } from '../motion'
 
 const Hero = () => {
   return (
     <Container>
-      <div className='flex sm:flex-row flex-col-reverse gap-6 items-center justify-between my-16 sm:my-20 relative'>
+      <div className='flex sm:flex-row flex-col-reverse gap-6 items-center justify-between my-16 sm:my-20 lg:mt-32 relative'>
         <motion.div
           className=' text-center sm:text-left w-[100%]'
           variants={fadeIn('right', 'spring', 0.5, 0.5)}

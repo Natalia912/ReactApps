@@ -56,6 +56,10 @@ export const zoomIn = (delay, duration) => {
         ease: 'easeOut',
       },
     },
+    exit: {
+      scale: 0,
+      opacity: 0,
+    },
   }
 }
 

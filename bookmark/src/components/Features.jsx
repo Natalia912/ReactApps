@@ -13,7 +13,7 @@ const Features = () => {
   const [active, setActive] = useState(0)
   return (
     <Container>
-      <div className='flex flex-col justify-center w-full lg:mt-56 sm:mt-32 mt-20 min-h-screen'>
+      <div className='flex flex-col justify-center w-full lg:mt-56 sm:mt-30 mt-20 ' id='Features'>
         <div className='text-center mx-auto'>
           <h2 className={`${styles.sectionHeader} mb-2 sm:mb-6`}>Features</h2>
           <p className={`${styles.sectionText}`}>
@@ -56,22 +56,37 @@ const Features = () => {
               </button>
             </li>
           </ul>
-          <div className='relative lg:my-20 sm:my-12 my-8'>
+          <div className='relative lg:my-20 sm:my-12 my-8 min-h-3xl'>
             <motion.div
-              className='sm:w-[45%] w-[80%] lg:h-[350px] md:h-[210px] sm:h-[45%] xs:h-[45%] xss:h-[200px] h-[160px] left-[-10%] bg-softBlue absolute rounded-r-full lg:top-[20%] md:top-[20%] sm:top-[30%] xs:top-[10%] top-[8%] z-[-55]'
+              className='sm:w-[45%] w-[80%] lg:h-[320px] md:h-[210px] sm:h-[180px] xs:h-[45%] xss:h-[200px] h-[160px] left-[-10%] bg-softBlue absolute rounded-r-full lg:top-[90px] md:top-[70px] sm:top-[55px] xs:top-[10%] top-[40px] z-[-55]'
               variants={fadeIn('right', 'linear', 0, 0.5)}
               initial='hidden'
               whileInView='show'
             />
             <AnimatePresence>
               {active === 0 && (
-                <Tab image={Tab1} description={tabs[0].description} header={tabs[0].title} />
+                <Tab
+                  key='tab1'
+                  image={Tab1}
+                  description={tabs[0].description}
+                  header={tabs[0].title}
+                />
               )}
               {active === 1 && (
-                <Tab image={Tab2} description={tabs[1].description} header={tabs[1].title} />
+                <Tab
+                  key='tab2'
+                  image={Tab2}
+                  description={tabs[1].description}
+                  header={tabs[1].title}
+                />
               )}
               {active === 2 && (
-                <Tab image={Tab3} description={tabs[2].description} header={tabs[2].title} />
+                <Tab
+                  key='tab3'
+                  image={Tab3}
+                  description={tabs[2].description}
+                  header={tabs[2].title}
+                />
               )}
             </AnimatePresence>
           </div>
@@ -81,4 +96,4 @@ const Features = () => {
   )
 }
 
-export default SectionWrapper(Features, 'Features')
+export default SectionWrapper(Features)
