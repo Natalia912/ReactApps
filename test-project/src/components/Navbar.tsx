@@ -1,5 +1,4 @@
-import { useState, Fragment, FC } from "react";
-
+import { useState, Fragment } from "react";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
@@ -8,80 +7,127 @@ import { Container } from "@mui/system";
 import Logo from "../assets/Logo";
 import Button from "@mui/material/Button";
 import Switch, { switchClasses } from '@mui/joy/Switch';
+import { AppBar, Stack, styled, Toolbar } from "@mui/material";
 
-const SwitchComp= () => {
-  return (
-    <Switch
-      color='primary'
-      checked
-      slotProps={{
-        track: {
-          children: (
-            <Fragment>
-              <Box sx={{width: '14px', height: '14px', background: '#fff', borderRadius: '50%', ml: '6px'}}></Box>
-            </Fragment>
-          ),
-        },
+// const SwitchComp= () => {
+//   return (
+//     <Switch
+//       color='primary'
+//       checked
+//       slotProps={{
+//         track: {
+//           children: (
+//             <Fragment>
+//               <Box sx={{width: '14px', height: '14px', background: '#fff', borderRadius: '50%', ml: '6px'}}></Box>
+//             </Fragment>
+//           ),
+//         },
         
-      }}
-      sx={{
-        '--Switch-thumbSize': '22px',
-        '--Switch-trackWidth': '50px',
-        '--Switch-trackHeight': '28px',
-        [`&.${switchClasses.checked}`]: {
-        '--Switch-thumbBackground': 'rgb(28, 27, 32)',
-        },
-        mr: 2
-      }}
-    />
-  )
-}
+//       }}
+//       sx={{
+//         '--Switch-thumbSize': '22px',
+//         '--Switch-trackWidth': '50px',
+//         '--Switch-trackHeight': '28px',
+//         [`&.${switchClasses.checked}`]: {
+//         '--Switch-thumbBackground': 'rgb(28, 27, 32)',
+//         },
+//         mr: 2
+//       }}
+//     />
+//   )
+// }
 
-const Navbar: FC<{matches: boolean}>  = ({matches}) => {
+const StyledToolbar = styled(Toolbar)({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  zIndex: 100,
+  paddingLeft: '0 !important',
+  paddingRight: '0 !important'
+})
+
+const NavBox = styled(Box)({
+  display: "flex",
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  padding: '40px 20px',
+  background: 'rgb(28, 27, 32)',
+  height: '100%',
+  minWidth: '200px'
+})
+
+const StyledNavButton = styled(Button)(({ theme }) => ({
+  textTransform: "inherit",
+  backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.secondary.contrastText,
+  '&:hover': {
+    color: theme.palette.secondary.main,
+    backgroundColor: theme.palette.secondary.contrastText,
+  }
+}));
+
+
+const Navbar  = () => {
   const [open, setOpen] = useState(false);
 
   return ( 
     <Container maxWidth='lg'>
-      <Box sx={{  width: '100%' }}>
-        <nav className="navbar">
+      <AppBar position="static" color="transparent" sx={{boxShadow: 'none'}}>
+        <StyledToolbar>
             <Logo />
-            <div className="navbar-items">
+            <Stack gap={2} direction='row'>
+              <IconButton
+                size="large"
+                edge="start"
+                aria-label="menu"
+                sx={{ mr: 2, display: {
+                  xs: 'block',
+                  sm: 'none'
+                } }}
+                onClick={() => setOpen(true)}
+              >
+                <MenuIcon sx={{color: 'white'}} />
+              </IconButton>
+              <Button 
+                variant="contained" 
+                size='small' 
+                sx={{
+                  textTransform: "inherit",
+                  display: {
+                    xs: 'none',
+                    sm: 'block'
+                  },
+                }}>I'm a photographer</Button>
+              <Button 
+                variant="contained" 
+                size='small' 
+                sx={{
+                  textTransform: "inherit",
+                  display: {
+                    xs: 'none',
+                    sm: 'block'
+                  }  
+                }}>I'm a partner</Button>
 
-              {!matches && (
-                <IconButton
-                  size="large"
-                  edge="start"
-                  aria-label="menu"
-                  sx={{ mr: 2 }}
-                  onClick={() => setOpen(true)}
-                >
-                  <MenuIcon sx={{color: 'white'}} />
-                </IconButton>
-              )}
-              {matches && <SwitchComp />}
-              {matches && <Button variant="contained" size='small' sx={{textTransform: "inherit"}}>I'm a photographer</Button>}
-              {matches && <Button variant="contained" size='small' sx={{textTransform: "inherit"}}>I'm a partner</Button>}
-              
-            </div>
+            </Stack>
+
             <Drawer
               anchor='left'
               open={open}
               onClose={() => setOpen(false)}
-              sx={{}}
             >
-              <Box sx={{display: "flex", flexDirection: 'column', justifyContent: 'space-between', padding: '40px 20px', background: 'rgb(28, 27, 32)', height: '100%', minWidth: '200px'}}>
-                <Box sx={{display: "flex", flexDirection: 'column', gap: 2}}>
-                  <Button variant="contained" size='small' sx={{color: "rgb(28, 27, 32)", background: '#fff', textTransform: "inherit"}}>I'm a photographer</Button>
-                  <Button variant="contained" size='small' sx={{color: "rgb(28, 27, 32)", background: '#fff', textTransform: "inherit"}}>I'm a partner</Button>
-                </Box>
-                <Box sx={{display: "flex", gap: 2, alignItems: 'center', justifyContent:'space-between'}}>
-                  <SwitchComp />
+              <NavBox>
+                <Stack gap={2}>
+                  <StyledNavButton variant="contained" size='small'>I'm a photographer</StyledNavButton>
+                  <StyledNavButton variant="contained" size='small'>I'm a partner</StyledNavButton>
+                </Stack>
+                <Stack direction='row' alignItems='center' justifyContent='space-between'>
                   <img src="./united-kingdom.png" alt="uk" />
-                </Box>
-              </Box>
+                </Stack>
+              </NavBox>
             </Drawer>
-        </nav>
-      </Box> 
+        </StyledToolbar>
+      </AppBar> 
     </Container>
   );
 }

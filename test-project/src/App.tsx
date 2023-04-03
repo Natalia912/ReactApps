@@ -1,20 +1,21 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Container } from '@mui/material';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import BackgroundBox from './components/BackgroundBox';
+
 function App() {
   const matches = useMediaQuery('(min-width:600px)');
 
   return (
-    <div className="App">
-      <div className='background'>
-        <Navbar matches={matches} />
+    <>
+      <BackgroundBox>
+        <Navbar />
         <Hero matches={matches} />
-      </div>
+      </BackgroundBox>
       <Footer matches={matches} />
-    </div>
+    </>
   )
 }
 
